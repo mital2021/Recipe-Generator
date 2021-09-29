@@ -4,10 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthcare Locator</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Recipe Generator</title>
 </head>
 <body>
-    <h2>Healthcare Locator</h2>
-    <h3>By; Mital, Brian C, Brian G</h3>
+ 
+    <div class="container">
+       <!--heading-->
+        <h1>Recipe Generator</h1>
+        
+          <div class="flex">
+          <!--input box and submit button-->
+            <form class="flex" id="submit">
+            <input type="text" id="search" placeholder="Search for recipe or name of food item "/>
+            <button class="search-btn" type="submit" id="search"><span>Search</span></button>
+            </form>
+          </div>
+  
+          <div id="recipe-heading"></div>
+          <div id="recipe" class="type"></div>
+          <div id="display-meal"></div>
+    </div>
+  
+
+    
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
