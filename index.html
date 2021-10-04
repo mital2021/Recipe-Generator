@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Recipe Generator</title>
-</head>
-<body>
- 
-    <div class="container">
-       <!--heading-->
-        <h1>Recipe Generator</h1>
-        
-          <div class="flex">
-          <!--input box and submit button-->
-            <form class="pure-form">
-            
-            <input type="text" class="pure-input-1 pure-input-rounded" placeholder="Search for recipe or name of food item " />
-            <button type="submit" class="button-error pure-button">Search</button>
-            </form>
-          </div>
-  
-          <div id="recipe-heading"></div>
-          <div id="recipe" class="type"></div>
-          <div id="display-meal"></div>
-    </div>
-  
 
-    
-    <script src="./assets/js/script.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Recipe Generator</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <!--heading-->
+    <h1>Recipe Generator</h1>
+
+    <div class="flex">
+      <!--input box and submit button-->
+      <form class="pure-form">
+
+        <input type="text" class="pure-input-1 pure-input-rounded"
+          placeholder="Search for recipe or name of food item " />
+        <button type="button" class="button-error pure-button">Search</button>
+      </form>
+    </div>
+
+    <div id="recipe-heading"></div>
+    <div id="recipe" class="type"></div>
+    <div id="display-meal"></div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
