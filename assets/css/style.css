@@ -46,3 +46,12 @@ body {
 button:hover{
   box-shadow: 4px 3px 6px rgba(10, 24, 10, 0.534);
 }
+
+#display-meal {
+  display: flex;
+  margin: 10px;
+}
+
+#display-meal div {
+  margin: 5px;
+}
