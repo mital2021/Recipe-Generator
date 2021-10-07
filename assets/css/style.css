@@ -6,9 +6,8 @@
 /*body*/
 body {
   background: #ddb995;
-  background: url("../image/image1.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
+  background: url("../image/image1.jpg") no-repeat center center fixed;
+  background-size: cover;
   color:rgba(8, 1, 1, 0.774);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
