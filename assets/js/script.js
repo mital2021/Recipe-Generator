@@ -1,9 +1,3 @@
-var displayMealId = $('#display-meal');
-var imageDiv = $('<div>');
-var imageTag = $('<img>');
-var foodTitle = $('<div>');
-var foodIdDiv = $('<div>');
-
 //Click listener for search button
 $('button').on('click', function () {
     //Input provided by user
@@ -16,26 +10,39 @@ $('button').on('click', function () {
             return response.json();
         })
         .then(function (response) {
+            //Clear the input
             $('input').val('');
-            foodIdDiv.empty();
 
             for (var i = 0; i < 3; i++) {
                 index = i;
                 //Div that contains image and title of specific 'cuisine'
+                var displayMealId = $('#display-meal');
+                var imageDiv = $('<div>');
+                var imageTag = $('<img>');
+                var foodTitle = $('<div>');
+
+                //Recipe id
+                var foodIdDiv = $('<div>');
+
                 var title = response.results[index].title;
                 var foodImageURL = response.results[index].image;
                 var foodId = response.results[index].id;
+
                 foodIdDiv.attr('id', foodId);
                 foodTitle.text(title);
                 imageTag.attr('src', foodImageURL)
+
                 foodTitle.appendTo(imageDiv);
                 imageTag.appendTo(imageDiv);
                 foodIdDiv.appendTo(imageDiv);
+
                 imageDiv.appendTo(displayMealId);
 
                 getRecipe(foodId);
             }
+
         })
+
 })
 
 var getRecipe = function (foodId) {
@@ -47,15 +54,20 @@ var getRecipe = function (foodId) {
         })
         .then(function (response) {
             //Array that contains the ingredients of the specific cuisine
-            //var ingredientArray = response.ingredients;
-            for (var i = 0; i < 3; i++) {
+            var ingredientArray = response.ingredients;
+
+            for (var i = 0; i < ingredientArray.length; i++) {
                 index = i;
                 var ingredientName = response.ingredients[index].name;
                 var ingredientAmount = response.ingredients[index].amount.us.value;
                 var ingredientUnit = response.ingredients[index].amount.us.unit;
+
                 var recipePara = $('<p>');
                 recipePara.text(ingredientName + ': ' + ingredientAmount + ' ' + ingredientUnit);
-                recipePara.appendTo(foodIdDiv);
+
+                recipePara.appendTo($('#' +foodId));
             }
+
         })
+
 }
