@@ -53,4 +53,6 @@ button:hover{
 
 #display-meal div {
   margin: 5px;
+  border: 3px solid #140a02;
+  border-radius: 15px;
 }
