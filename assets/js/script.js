@@ -1,10 +1,9 @@
 $('button').on('click', function () {
     var userInput = $('input').val();
 
-    fetch("https://api.edamam.com/api/recipes/v2?type=public&cuisineType="+userInput+"&app_id=f2f08026&app_key=1c35f8d0041b4d0aee2d8ff722c57ff4"
+    fetch("https://api.edamam.com/api/recipes/v2?type=public&q=desserts&app_id=f2f08026&app_key=1c35f8d0041b4d0aee2d8ff722c57ff4&dishType=Desserts"
     )
         //conole log request
-        //.then(function (response) {
         //console.log(response.json();
 
         .then(function (response) {
@@ -12,7 +11,7 @@ $('button').on('click', function () {
         })
         .then(function (response) {
             console.log(response)
-            for (var i = 0; i < 10; i++) {
+            for (var i = 0; i < 4; i++) {
                 index = i;
 
                 var displayMealId = $('#display-meal');
@@ -26,6 +25,8 @@ $('button').on('click', function () {
                 foodTitle.appendTo(imageDiv);
                 imageTag.appendTo(imageDiv);
                 imageDiv.appendTo(displayMealId)
+
+                /*getRecipe();   */
             }
         })
-});
+})
