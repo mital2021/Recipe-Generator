@@ -46,13 +46,7 @@ button:hover{
   box-shadow: 4px 3px 6px rgba(10, 24, 10, 0.534);
 }
 
-#display-meal {
-  display: flex;
-  margin: 10px;
+.meal-div, .dessert-div {
+  flex-wrap: wrap;
 }
 
-#display-meal div {
-  margin: 5px;
-  border: 3px solid #140a02;
-  border-radius: 15px;
-}

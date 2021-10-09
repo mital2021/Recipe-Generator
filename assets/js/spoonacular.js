@@ -10,7 +10,7 @@ var getMealImgAndTitle = function (userInput) {
             for (var i = 0; i < 4; i++) {
                 index = i;
                 //Div that contains image and title of specific cuisine
-                var displayMealId = $('#display-meal');
+                var displayMealId = $('.meal-div');
                 var imageDiv = $('<div>');
                 var imageTag = $('<img>');
                 var foodTitle = $('<div>');
