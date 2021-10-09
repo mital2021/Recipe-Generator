@@ -11,7 +11,6 @@ $('.search-button').on('click', function () {
 
     //Clears 'display-meal' whenever a new cuisne is typed into the search box
     $('.meal-div').empty();
-    $('.dessert-div').empty();
 
     //Create and display saved meal buttons
     var newBtn = document.createElement('button');
@@ -36,7 +35,6 @@ $('.search-button').on('click', function () {
 })
 
 
-
 $(document).ready(function () {
     //Retrieves saved cuisines from array
     var savedMeals = JSON.parse(localStorage.getItem('savedMeals'));
@@ -55,7 +53,6 @@ $(document).ready(function () {
         $(newBtn).on('click', function () {
             var savedMealCuisine = $(this).text();
             $('.meal-div').empty();
-            $('.dessert-div').empty();
 
             getMealImgAndTitle(savedMealCuisine);
             getRecipe(savedMealCuisine);
