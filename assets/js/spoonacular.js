@@ -28,6 +28,8 @@ var getMealImgAndTitle = function (userInput) {
                 foodTitle.text(title);
                 imageTag.attr('src', foodImageURL)
 
+                foodTitle.css({'font-size':'20px','margin':'10px','text-decoration':'underline','color':'brown'});
+
                 //Append to 'display-meal' div
                 foodTitle.appendTo(imageDiv);
                 imageTag.appendTo(imageDiv);
