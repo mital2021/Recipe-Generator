@@ -50,3 +50,6 @@ button:hover{
   flex-wrap: wrap;
 }
 
+#saved-meal {
+  display: flex;
+}

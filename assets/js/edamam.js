@@ -21,6 +21,7 @@ var getDessert = function () {
                 var titleURL = response.hits[index].recipe.label;
                 var foodImageURL = response.hits[index].recipe.image;
                 foodTitle.text(titleURL);
+                foodTitle.css({'font-size':'20px','margin':'10px','text-decoration':'underline','color':'brown'});
                 imageTag.attr('src', foodImageURL)
                 foodTitle.appendTo(imageDiv);
                 imageTag.appendTo(imageDiv);
